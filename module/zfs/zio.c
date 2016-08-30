@@ -3408,7 +3408,7 @@ zio_done(zio_t *zio)
 	         * If Godfather there were child I/Os that wants to reexecute,
 	         * we only clear the suspend flag bit, so that the Godfather can
 	         * keep on monitor its children which need to reexecute now. Otherwise
-	         * the Godfather I/O ignore this and done, it will cause those child I/Os
+	         * the Godfather I/O ignore this and done, it will lead to child I/Os
 	         * lost monitor I/O and have no chance to reexecute again.
 	         */
 	    	if ((zio->io_child_count > 0) &&
